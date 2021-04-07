@@ -6,7 +6,7 @@ global legend_flag;
 legend_flag = [];
 
 global noise_sigma;
-noise_sigma = 0.1;
+noise_sigma = 0.5;
 
 fig = figure();
 
@@ -14,7 +14,7 @@ fig = figure();
 ENV = env(true);        % generate envrionment
 DYN = dyn();        % first order dynamic
 for i = 1:length(ENV.sub_polygon)                   % loop for all cell
-    Control{i} = find_controller(DYN, ENV.sub_polygon(i));  % find controller for every cell
+    Control{i} = find_controller2(DYN, ENV.sub_polygon(i));  % find controller for every cell
 end
 
 %% simulation 

@@ -18,7 +18,6 @@ state = plot(x0(1), x0(2), 'ro');
 trajctory = animatedline;
     addpoints(trajctory,x(1),x(2));
 h2 = plot(x(1,1),x(2,1), ['*',color], 'DisplayName','start point');
-
 for t = 0:dt:T
     % decided poly
     for i = 1:num
