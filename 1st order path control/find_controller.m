@@ -37,17 +37,17 @@ cvx_begin quiet
     minimize(norm(K))
     subject to
         %% chance CBP constraint
-%         for i = 1:n_h
-%             Lg = Ah(i, :)*B;
-%             T = Ah(i, :)*A + alpha_hi(i)*Ah(i, :);
-%             K1 = T + Lg*K*C;
-%             K2 = Lg*K;
-%             alpha_ = alpha_hi(i)*bh(i);
-%             Gamma = sigma;
-%             K2*Gamma*K2' - Lg*D - alpha_ <= -lambda(:, i)'*bx;
-%             K1 - lambda(:, i)'*Ax == 0;
-%             lambda(:, i)' >= 0;
-%         end
+        for i = 1:n_h
+            Lg = Ah(i, :)*B;
+            T = Ah(i, :)*A + alpha_hi(i)*Ah(i, :);
+            K1 = T + Lg*K*C;
+            K2 = Lg*K;
+            alpha_ = alpha_hi(i)*bh(i);
+            Gamma = sigma;
+            K2*Gamma*K2' - Lg*D - alpha_ <= -lambda(:, i)'*bx;
+            K1 - lambda(:, i)'*Ax == 0;
+            lambda(:, i)' >= 0;
+        end
 
         - Q ==  ((A+B*K)'*P + P*(A+B*K) + beta*P);  
         Q >= 0;
