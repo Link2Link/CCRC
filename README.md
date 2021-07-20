@@ -13,3 +13,18 @@ main.m
 ```
 main.m
 ```
+
+## Citation 
+If you find this project useful in your research, please consider cite:
+
+
+```
+@misc{wang2020chance,
+      title={Chance Constraint Robust Control with Control Barrier Functions}, 
+      author={Chenfei Wang and Mahroo Bahreinian and Roberto Tron},
+      year={2020},
+      eprint={2012.10573},
+      archivePrefix={arXiv},
+      primaryClass={math.OC}
+}
+```
